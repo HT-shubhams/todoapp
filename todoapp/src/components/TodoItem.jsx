@@ -4,10 +4,11 @@ export default function TodoItem({ item, todos, setTodos }) {
     console.log("delete button clicked for", item);
     setTodos(todos.filter((todo) => todo !== item));
   }
+
   function handleClick(name) {
     setTodos(
       todos.map((todo) =>
-        todo.name === name ? { ...todo, done: !todo.none } : todo
+        todo.name === name ? { ...todo, done: !todo.done } : todo
       )
     );
   }
